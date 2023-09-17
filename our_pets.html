@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./icons8-кошачий-след-16.png" type="image/x-icon">
+    <title>Our_pets</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <script src="./script.js" defer type="module"></script>
+</head>
+<body>
+    <header class="header our_pets_header">
+        <div hidden class="shadow"></div>
+        <div class="container">
+            <div class="header_wrapper our_pets_header_wrapper">
+                <div class="header_nav">
+                    <div class="logo">
+                        <h1><a class="our_pets_header__color" href="index.html">Cozy House</a></h1>
+                        <p class="our_pets_header__color">Shelter for pets in Boston</p>
+                    </div>
+                    <div class="burger_img">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="nav_items" >
+                        <nav class="navigation">
+                            <ul>
+                                <li><a class="nav_link our_pets_header__color" href="index.html">About the shelter</a></li>
+                                <li><a class="nav_link our_pets_header__color activ" href="#our_pets_page">Our pets</a></li>
+                                <li><a class="nav_link our_pets_header__color" href="index.html#help">Help the shelter</a></li>
+                                <li><a class="nav_link our_pets_header__color" href="#contacts">Contacts</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="our_pets_page" class="our_pets_wrapper our_pets_slider_items">
+            <div class="container">
+                <div class="pets_wrapper our_pets_wrapper_768">
+                    <h3>Our friends who <br> are looking for a house</h3>
+                    <div class="pets_slider our_pets_slider">
+                        <div class="pets_slider_wrapper our_pets_slider_wrapper">
+                            <div class="pets_slider_items our_pets_slider__wrap">
+                                <!-- карточки питомцев генерируются из файла js  -->
+                            </div>
+                        </div>
+                        <div class="pets_modal_wrapper">
+                            <div class="pets_modal">
+                                <div class="pets_modal_items">
+                                    <!-- модальные окна  генерируются из файла js -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="buttons" class="our_pets_nav">
+                            <div data-button class="our_pets_nav_item img_rotate"><img src="img/our_pets_img/right2.png" alt="arrow"></div>
+                            <div data-button class="our_pets_nav_item img_rotate"><img src="img/our_pets_img/right1.png" alt="arrow"></div>
+                            <div data-button class="our_pets_nav_item our_pets_nav_item_color"><img src="img/our_pets_img/1.png" alt="1"> </div>
+                            <div data-button class="our_pets_nav_item"><img src="img/our_pets_img/right1.png" alt="arrow"></div>
+                            <div data-button class="our_pets_nav_item"><img src="img/our_pets_img/right2.png" alt="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer  class="footer">
+        <div class="container">
+            <div class="footer_wrapper our_footer_wrapper">
+                <div id="contacts" class="footer_contacts">
+                    <h3 class="footer_subtittle">For questions and suggestions</h3>
+                    <div class="contacts_mail contacts_item">
+                        <img src="img/main_img/icon-email.svg" alt="email">
+                        <a class="contacts_sub_item" href="mailto:email@shelter.com">email@shelter.com</a>
+                    </div>
+                    <div class="contacts_tel contacts_item">
+                        <img src="img/main_img/icon-phone.svg" alt="phone">
+                        <a class="contacts_sub_item" href="tel:+136745677554">+13 674 567 75 54</a>
+                    </div>
+                </div>
+                <div class="footer_locations">
+                    <h3 class="footer_subtittle">We are waiting for your visit</h3>
+                    <div class="location_boston contacts_item">
+                        <a href="https://goo.gl/maps/5yMMg4SWyN7D7pLT8" target="_blank">
+                            <img src="img/main_img/icon-marker.png" alt="marker">
+                            <p class="contacts_sub_item">1 Central Street, Boston (entrance from the store)</p>
+                        </a>
+                    </div>
+                    <div class="location_london contacts_item">
+                        <a href="https://goo.gl/maps/LT6GPy8SEJNLfkn78" target="_blank">
+                            <img src="img/main_img/icon-marker.png" alt="marker">
+                            <p class="contacts_sub_item">18 South Park, London </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer_img">
+                    <img src="img/main_img/footer-puppy.png" alt="puppy">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
