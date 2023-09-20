@@ -3,6 +3,7 @@
 import showMenu from './components/menu_burger.js';
 import { showCard } from './components/card_pets.js';
 import { renderModalWindow } from './components/modal.js';
+import { createSlider} from './components/slider.js';
 
 document.addEventListener('DOMContentLoaded', function(){
 
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 //слайдер 
     
+    createSlider()
 
 //Реализация пагинации на странице Pets:
 
