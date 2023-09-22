@@ -1,8 +1,8 @@
 
-function renderModalWindow() {
+async function renderModalWindow() {
     //не приходят картинки при запросе через URL
     // fetch("https://raw.githubusercontent.com/rolling-scopes-school/tasks/master/tasks/shelter/pets.json")
-    fetch('pets.json')
+    await fetch('pets.json')
         .then(response => response.json())
         .then((petsModal) => {
             const wrapper = document.querySelector('.pets_modal_items');
@@ -30,10 +30,11 @@ function renderModalWindow() {
                     </div>
                     `
             }
-            wrapper.innerHTML = out
+           wrapper.innerHTML = out
         })
+        const petModalArr = document.querySelectorAll('.pets_modal_item');
+        return petModalArr
 }
 
 export { renderModalWindow }
 
-    
