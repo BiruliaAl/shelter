@@ -1,4 +1,3 @@
-'use strict'
 
 import showMenu from './components/menu_burger.js';
 import { showCard } from './components/card_pets.js';
@@ -11,27 +10,24 @@ document.addEventListener('DOMContentLoaded', function(){
     showMenu()
 
 
-//генерация карточек животных на страницу через класс 
+//генерация карточек животных на страницу  
     
+    console.log(showCard())
     showCard()
+        .then((card) => {
+            console.log(card)
+        })
+        console.log(petModalArr)
 
 //Реализация модальных окон на обеих страницах
 
+    console.log(renderModalWindow())
     renderModalWindow()
+        .then((modal) => {
+            console.log(modal)
+        })
 
 //вывод поп-пап на обеих страницах 
-
-    async function load() {
-        let card = await import('./components/card_pets.js');
-        card.showCard();
-        const petCardArr = document.querySelectorAll('.pets_modal_item');
-        const petModalArr = document.querySelectorAll('.pets_modal_item');
-
-        console.log(petCardArr)
-        console.log(petModalArr)
-    }
-    load()
-
     function showModal() {
         const  modalClose = document.querySelector('.modal_cross'),
                 modalItem = document.querySelector('.pets_modal_items'),
@@ -52,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 shadowItem.hidden = true;
             })
     }
+
 
 //слайдер 
     

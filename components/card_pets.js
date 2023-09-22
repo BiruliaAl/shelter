@@ -1,9 +1,9 @@
 const BUTTON_INFO = 'Learn more'
 
-function showCard() {
+async function showCard() {
     //не приходят картинки при запросе через URL
     // fetch("https://raw.githubusercontent.com/rolling-scopes-school/tasks/master/tasks/shelter/pets.json")
-    fetch('pets.json')
+    await fetch('pets.json')
         .then(response => response.json())
         .then((pets) => {
             console.log(pets)
@@ -18,8 +18,10 @@ function showCard() {
                     </div>
                 `
             }
-            wrapper.innerHTML = out;
+          wrapper.innerHTML = out;
         })
+        const petCardArr = document.querySelectorAll('.pets_slider_item');
+        return petCardArr
 }
 
 export { showCard }
