@@ -9,25 +9,33 @@ document.addEventListener('DOMContentLoaded', function(){
 //меню - бургер 
     showMenu()
 
-
 //генерация карточек животных на страницу  
-    
-    console.log(showCard())
+let petCardArr = [];
+
     showCard()
         .then((card) => {
-            console.log(card)
+            card.forEach(item => {
+                petCardArr.push(item)
+            });             ;
+            return petCardArr
         })
-        console.log(petModalArr)
+    console.log(petCardArr) // получили массив карточек животных 
 
 //Реализация модальных окон на обеих страницах
 
-    console.log(renderModalWindow())
+let modalArr = [];
+
     renderModalWindow()
         .then((modal) => {
-            console.log(modal)
+            modal.forEach(item => {
+                modalArr.push(item)
+            });
+            return modalArr
         })
+        console.log(modalArr) //получили массив модалок 
 
 //вывод поп-пап на обеих страницах 
+    
     function showModal() {
         const  modalClose = document.querySelector('.modal_cross'),
                 modalItem = document.querySelector('.pets_modal_items'),
@@ -49,14 +57,11 @@ document.addEventListener('DOMContentLoaded', function(){
             })
     }
 
-
 //слайдер 
     
     createSlider()
 
-//Реализация пагинации на странице Pets:
-
-
+//Реализация пагинации на странице Pets:пше
 
 }, false);
 
