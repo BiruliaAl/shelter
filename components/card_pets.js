@@ -6,7 +6,6 @@ async function showCard() {
     await fetch('pets.json')
         .then(response => response.json())
         .then((pets) => {
-            console.log(pets)
             const wrapper = document.querySelector('.pets_slider_items');
             let out = '';
             for(let pet of pets) {

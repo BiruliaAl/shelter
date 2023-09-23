@@ -10,37 +10,19 @@ document.addEventListener('DOMContentLoaded', function(){
     showMenu()
 
 //генерация карточек животных на страницу  
-let petCardArr = [];
-
     showCard()
-        .then((card) => {
-            card.forEach(item => {
-                petCardArr.push(item)
-            });             ;
-            return petCardArr
-        })
-    console.log(petCardArr) // получили массив карточек животных 
-
+       
 //Реализация модальных окон на обеих страницах
 
-let modalArr = [];
-
     renderModalWindow()
-        .then((modal) => {
-            modal.forEach(item => {
-                modalArr.push(item)
-            });
-            return modalArr
-        })
-        console.log(modalArr) //получили массив модалок 
-
+       
 //вывод поп-пап на обеих страницах 
     
-   
+
 
 //слайдер 
     
-    createSlider()
+    createSlider() // нет доступа к элементам 
 
 //Реализация пагинации на странице Pets:пше
 

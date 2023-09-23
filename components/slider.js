@@ -8,7 +8,6 @@ function createSlider() {
                 buttonPrev = document.querySelector('.arrow__start'),
                 width = window.getComputedStyle(sliderWrapper).width;
     
-        console.log(slides);
         sliderInner.style.width = 100 *  slides.length + '%';
         slides.forEach( slide => {
             slide.style.width = width;
