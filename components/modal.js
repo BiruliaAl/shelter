@@ -1,3 +1,4 @@
+import { showCard } from './card_pets.js';
 
 async function renderModalWindow() {
     //не приходят картинки при запросе через URL
@@ -36,5 +37,79 @@ async function renderModalWindow() {
         return petModalArr
 }
 
+function openModalWindow() {
+
+    const parentModal = document.querySelector('.pets_wrapper'),
+        modalClose = document.querySelector('.modal_cross'), //созданный динамически крестик не получаем???
+        shadowItem = document.querySelector('.shadow');
+    
+    let petCardArr = []; 
+    let modalArr = []; //modalItem = document.querySelector('.pets_modal_items'),
+
+    showCard()
+        .then((card) => {
+            card.forEach(item => {
+                petCardArr.push(item)
+            });             ;
+            return petCardArr
+        })
+    console.log(petCardArr instanceof Array)
+
+    renderModalWindow()
+        .then((modal) => {
+            modal.forEach(item => {
+                modalArr.push(item)
+            });
+            return modalArr
+        })
+    console.log(modalArr instanceof Array)
+
+    function showTabContent(i = 0) {
+        modalArr[i].classList.remove('pets_modal_item__hidden'); // почему ошибка???
+        shadowItem.hidden = false;
+        document.body.style.overflow = "hidden";
+    }
+
+    showTabContent()
+
+    parentModal.addEventListener('click', (event) => {
+        const target = event.target;
+        if(target && target.matches(".pets_slider_item")) {
+            petCardArr.forEach((item, i) => {
+                if (target == item) {
+                    showTabContent(i); // не срабатывает функция ...
+                }
+            })
+        }   
+    })
+}
+
+openModalWindow()
+
 export { renderModalWindow }
+    
+
+//         function showModal() {
+//             const  modalClose = document.querySelector('.modal_cross'),
+//                     modalItem = document.querySelector('.pets_modal_items'),
+//                     shadowItem = document.querySelector('.shadow');
+        
+//                 shadowItem.hidden = false;
+//                 document.body.style.overflow = "hidden";
+                
+//                 modalClose.addEventListener('click', () => {
+//                     modalItem.innerHTML = "";
+//                     document.body.style.overflow = "";
+//                     shadowItem.hidden = true;
+//                 })
+        
+//                 shadowItem.addEventListener('click', () => {
+//                     modalItem.innerHTML = "";
+//                     document.body.style.overflow = "";
+//                     shadowItem.hidden = true;
+//                 })
+//         }
+// }
+
+
 
