@@ -286,6 +286,10 @@ h1 a {
     margin-bottom: 20px;
 }
 
+.pets_slider_item img {
+    pointer-events: none;
+}
+
 .pets_slider_item:hover {
     box-shadow: 1px -1px 10px 1px rgba(34, 60, 80, 0.2);
     transition: 0.5s;
@@ -307,6 +311,7 @@ h1 a {
     margin-top: 33px;
     margin-bottom: 30px;
     background: #FAFAFA;
+    pointer-events: none;
 }
 
 .pets_slider_btn {

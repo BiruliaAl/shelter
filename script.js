@@ -36,26 +36,7 @@ let modalArr = [];
 
 //вывод поп-пап на обеих страницах 
     
-    function showModal() {
-        const  modalClose = document.querySelector('.modal_cross'),
-                modalItem = document.querySelector('.pets_modal_items'),
-                shadowItem = document.querySelector('.shadow');
-    
-            shadowItem.hidden = false;
-            document.body.style.overflow = "hidden";
-            
-            modalClose.addEventListener('click', () => {
-                modalItem.innerHTML = "";
-                document.body.style.overflow = "";
-                shadowItem.hidden = true;
-            })
-    
-            shadowItem.addEventListener('click', () => {
-                modalItem.innerHTML = "";
-                document.body.style.overflow = "";
-                shadowItem.hidden = true;
-            })
-    }
+   
 
 //слайдер 
     
