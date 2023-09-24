@@ -338,7 +338,7 @@ h1 a {
     border-radius: 15px;
 }
 
-.pets_modal_item__hidden {
+[hidden] {
     display: none;
 }
 
@@ -515,6 +515,34 @@ h1 a {
     color: #B2B2B2;
     max-width: 380px;
     letter-spacing: 0.0em;
+}
+
+.call {
+    padding: 50px;
+}
+
+.call .btn_call {
+    width: 20%;
+    height: 40px;
+    padding: 5px 20px;
+    background: #F1CDB3;
+    border: none;
+}
+
+.call_wrapper h3 {
+    text-align: center;
+}
+
+.call_wrapper form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form input {
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #c5c4c4;
 }
 
 .footer {

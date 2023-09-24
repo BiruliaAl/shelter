@@ -140,6 +140,23 @@
         margin: 0 auto;
         margin-top: 60px;
     }
+
+    .order_form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .order_form input {
+        width: 70%;
+        align-items: center;
+        margin-top: 10px;
+        margin-right: 0;
+    }
+    .call .btn_call {
+        width: 70%;
+        margin-top: 20px;
+    }
     .footer_wrapper {
         display: flex;
         justify-content: space-around;

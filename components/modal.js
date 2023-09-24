@@ -10,7 +10,7 @@ async function renderModalWindow() {
             let out = ''         
             for(let petModal of petsModal) { 
                 out += `
-                    <div class="pets_modal_item pets_modal_item__hidden"> 
+                    <div class="pets_modal_item" hidden > 
                         <div class="modal_cross">
                             <img src="./img/main_img/Vector.png" alt="cross">
                         </div>
@@ -36,6 +36,7 @@ async function renderModalWindow() {
         const petModalArr = document.querySelectorAll('.pets_modal_item');
         return petModalArr
 }
+renderModalWindow()
 
 let petCardArr = []; // = document.querySelector('.pets_slider_item'),
 let modalArr = []; // = document.querySelector('.pets_modal_items'),
@@ -47,7 +48,7 @@ let modalArr = []; // = document.querySelector('.pets_modal_items'),
             });             ;
             return petCardArr
         })
-    console.log(petCardArr)
+    console.log(petCardArr) // [pets_slider_item]
     
     renderModalWindow()
         .then((modal) => {
@@ -56,7 +57,7 @@ let modalArr = []; // = document.querySelector('.pets_modal_items'),
             });
             return modalArr
         })
-    console.log(modalArr)
+    console.log(modalArr) // [pets_modal_item]
 
     console.log(petCardArr[0]) // undefined 
     console.log(modalArr[0]) // undefined 
@@ -66,27 +67,35 @@ let modalArr = []; // = document.querySelector('.pets_modal_items'),
         const parentModal = document.querySelector('.pets_wrapper'),
             modalClose = document.querySelector('.modal_cross'), //созданный динамически крестик не получаем???
             shadowItem = document.querySelector('.shadow');
-        
+
+        console.log(modalClose)
+
         function showTabContent(i = 0) {
-            modalArr[i].classList.remove('pets_modal_item__hidden'); // элемент массива undefined 
+            modalArr[i].removeAttribute([hidden]); // элемент массива undefined 
             shadowItem.hidden = false;
             document.body.style.overflow = "hidden";
         }
+        showTabContent()
     
         parentModal.addEventListener('click', (event) => {
             const target = event.target;
             if(target && target.matches(".pets_slider_item")) {
                 petCardArr.forEach((item, i) => {
                     if (target == item) {
-                        showTabContent(i); // не срабатывает функция ...
+                        showTabContent(i); 
                     }
                 })
             }   
         })
     }
 
+    openModalWindow()
+
 
 export { renderModalWindow }
+
+const arr = [5, 6, 11, 20, 3];
+ 
     
 
 //         function showModal() {
