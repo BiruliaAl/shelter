@@ -322,6 +322,7 @@
 
     .arrow__start {
         align-self: start;
+        margin-top: -40px;
     }
 
     .arrow_end {

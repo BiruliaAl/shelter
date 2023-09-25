@@ -35,66 +35,64 @@ async function renderModalWindow() {
         })
         const petModalArr = document.querySelectorAll('.pets_modal_item');
         return petModalArr
-}
-renderModalWindow()
-
-let petCardArr = []; // = document.querySelector('.pets_slider_item'),
-let modalArr = []; // = document.querySelector('.pets_modal_items'),
-
-    showCard()
-        .then((card) => {
-            card.forEach(item => {
-                petCardArr.push(item)
-            });             ;
-            return petCardArr
-        })
-    console.log(petCardArr) // [pets_slider_item]
-    
+    }
     renderModalWindow()
-        .then((modal) => {
-            modal.forEach(item => {
-                modalArr.push(item)
-            });
-            return modalArr
-        })
-    console.log(modalArr) // [pets_modal_item]
 
-    console.log(petCardArr[0]) // undefined 
-    console.log(modalArr[0]) // undefined 
+    let petCardArr = []; // = document.querySelector('.pets_slider_item'),
+    let modalArr = []; // = document.querySelector('.pets_modal_items'),
+
+    async function init() {
+        petCardArr = await showCard();
+        modalArr = await renderModalWindow();
+    }
+
+    init().then(() => {
+        openModalWindow()
+        clouseModalWindow()
+    })
 
     function openModalWindow() {
 
-        const parentModal = document.querySelector('.pets_wrapper'),
-            modalClose = document.querySelector('.modal_cross'), //созданный динамически крестик не получаем???
+        const parentModal = document.querySelector('.pets_wrapper'), 
             shadowItem = document.querySelector('.shadow');
 
-        console.log(modalClose)
-
-        function showTabContent(i = 0) {
-            modalArr[i].removeAttribute([hidden]); // элемент массива undefined 
-            shadowItem.hidden = false;
-            document.body.style.overflow = "hidden";
-        }
-        showTabContent()
-    
         parentModal.addEventListener('click', (event) => {
             const target = event.target;
             if(target && target.matches(".pets_slider_item")) {
+                const id = +event.target.dataset.id;
+
                 petCardArr.forEach((item, i) => {
-                    if (target == item) {
-                        showTabContent(i); 
+                    if (id === i + 1) {
+                        modalArr[i].removeAttribute('hidden'); 
+                        shadowItem.hidden = false;
+                        document.body.style.overflow = "hidden"; 
                     }
                 })
             }   
         })
     }
 
-    openModalWindow()
+    function clouseModalWindow() {
+        const modalClose = document.querySelector('.modal_cross'),
+             parentModal = document.querySelector('.pets_wrapper'), 
+              shadowItem = document.querySelector('.shadow');
+
+        parentModal.addEventListener('click', (event) => {
+            const target = event.target;
+            console.log(target)
+            if( target && target.matches(".modal_cross")) {
+                modalArr.forEach(item => {
+                    item.setAttribute("hidden", "hidden");
+                })
+                shadowItem.hidden = true;
+                document.body.style.overflow = "";
+            }
+        })
+        
+    }
 
 
-export { renderModalWindow }
-
-const arr = [5, 6, 11, 20, 3];
+    export { renderModalWindow }
  
     
 
