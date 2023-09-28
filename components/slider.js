@@ -1,12 +1,12 @@
-import { showCard } from './card_pets.js';
+// import { showCard } from './card_pets.js';
 
-async function init() {
-    await showCard();
-}
+// async function init() {
+//     await showCard();
+// }
 
-init().then(() => {
-    createSlider()
-})
+// init().then(() => {
+//     createSlider()
+// })
 
 function createSlider() {
 
