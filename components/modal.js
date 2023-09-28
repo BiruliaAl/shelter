@@ -79,7 +79,6 @@ async function renderModalWindow() {
 
         parentModal.addEventListener('click', (event) => {
             const target = event.target;
-            console.log(target)
             if( target && target.matches(".modal_cross")) {
                 modalArr.forEach(item => {
                     item.setAttribute("hidden", "hidden");
