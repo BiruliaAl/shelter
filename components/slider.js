@@ -87,11 +87,10 @@ function createSlider() {
                 sliderInner.style.transform = `translateX(-${offset}px)`
             })
         }
-
     }
 
     window.addEventListener('change', () => {
-        createSlider()
+        createSlider;
     });
 
 export { createSlider }
