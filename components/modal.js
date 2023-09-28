@@ -73,12 +73,12 @@ async function renderModalWindow() {
     }
 
     function clouseModalWindow() {
-        const modalClose = document.querySelector('.modal_cross'),
-             parentModal = document.querySelector('.pets_wrapper'), 
+        const parentModal = document.querySelector('.pets_wrapper'), 
               shadowItem = document.querySelector('.shadow');
 
         parentModal.addEventListener('click', (event) => {
             const target = event.target;
+            console.log(target)
             if( target && target.matches(".modal_cross")) {
                 modalArr.forEach(item => {
                     item.setAttribute("hidden", "hidden");

@@ -23,8 +23,17 @@
         margin: 0 auto;
     }
 
+    .our_pets_slider_wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
     .pets_slider_item:nth-child(2) {
         margin-right: 0;
+    }
+
+    .our_pets_slider_item:nth-child(2) {
+        margin-right: 30px;
     }
 
     .pets_slider_items {
@@ -211,7 +220,7 @@
         z-index: 9;
         width: 40px;
         height: 40px;
-        top: 20px;
+        top: 5px;
         right: 20px;
     }
     .burger_img span {
@@ -293,10 +302,16 @@
         display: none;
     }
 
+    .pets_modal_item {
+        width: 70%;
+    }
+
     .pets_slider_wrapper {
         max-width: 270px;
-        margin: 0 auto;
-        /* order: -1; */
+    }
+
+    .our_pets_slider_wrapper {
+        max-width: 1200px;
     }
 
     .pets_slider_item {
