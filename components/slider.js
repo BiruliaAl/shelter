@@ -1,13 +1,3 @@
-// import { showCard } from './card_pets.js';
-
-// async function init() {
-//     await showCard();
-// }
-
-// init().then(() => {
-//     createSlider()
-// })
-
 function createSlider() {
 
     const sliderWrapper = document.querySelector('.pets_slider_wrapper'), 

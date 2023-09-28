@@ -18,15 +18,16 @@ async function renderModalWindow() {
                             <img src=${petModal.img} alt=${petModal.type}>
                         </div>
                         <div>
-                        <h3>${petModal.name}</h3>
-                        <div>${petModal.type} - ${petModal.breed}</div>
-                        <p>${petModal.description}</p>
+                            <h3>${petModal.name}</h3>
+                            <div>${petModal.type} - ${petModal.breed}
+                            </div>
+                            <p>${petModal.description}</p>
                             <ul>
-                            <li><span>Age:</span> ${petModal.age}</li>
-                            <li><span>Inoculations:</span>${petModal.inoculations} </li>
-                            <li><span>Diseases:</span>${petModal.diseases }</li>
-                            <li><span>Parasites:</span>${petModal.parasites}</li>
-                        </ul>
+                                <li><span>Age:</span> ${petModal.age}</li>
+                                <li><span>Inoculations:</span>${petModal.inoculations} </li>
+                                <li><span>Diseases:</span>${petModal.diseases }</li>
+                                <li><span>Parasites:</span>${petModal.parasites}</li>
+                            </ul>
                         </div>
                     </div>
                     `
@@ -78,7 +79,6 @@ async function renderModalWindow() {
 
         parentModal.addEventListener('click', (event) => {
             const target = event.target;
-            console.log(target)
             if( target && target.matches(".modal_cross")) {
                 modalArr.forEach(item => {
                     item.setAttribute("hidden", "hidden");

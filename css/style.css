@@ -402,9 +402,9 @@ h1 a {
 }
 
 .pets_modal_item li::before {
-    color: #F1CDB3; /* Цвет маркера */
-    content: "▪"; /* Сам маркер */
-    padding-right: 10px; /* Расстояние от маркера до текста */
+    color: #F1CDB3; 
+    content: "▪"; 
+    padding-right: 10px; 
    }
 
 .next {
