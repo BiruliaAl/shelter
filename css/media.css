@@ -32,10 +32,6 @@
         margin-right: 0;
     }
 
-    .our_pets_slider_item:nth-child(2) {
-        margin-right: 30px;
-    }
-
     .pets_slider_items {
        margin: 65px 0 60px;
     }
